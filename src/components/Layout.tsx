@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet, useNavigate, Link } from "react-router-dom";
 import { menus } from "../lib/dummy";
 import { AUTH } from "../context/hooks";
 
@@ -30,7 +30,9 @@ const Layout = () => {
     <>
       <header className="fixed top-0 left-0 w-full bg-white border-b border-border z-10">
         <div className="flex justify-between max-w-300 mx-auto items-center p-2.5">
-          <h1 className="font-black text-2xl">요구사항 앱</h1>
+          <Link to={"/"} className="font-black text-2xl">
+            요구사항 앱
+          </Link>
           <button onClick={menuHandler} className="button cancel">
             메뉴보기
           </button>
